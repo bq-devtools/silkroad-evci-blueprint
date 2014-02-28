@@ -22,9 +22,15 @@ Example: **/event/log:Error**
 
 + Request (application/json)
 
-        {
-            "Field 1": "Description of field 1",
-            "Field 2": "Description of field 2"
-        }
+    + Headers
+
+            Authorization : Bearer {token}                  
+
+    + Body                                 
+
+            {
+                "Field 1": "Description of field 1",
+                "Field 2": "Description of field 2"
+            }
 
 + Response 202 
