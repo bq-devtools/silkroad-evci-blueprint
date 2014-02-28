@@ -1,0 +1,30 @@
+FORMAT: 1A
+HOST: https://evci.int.bqws.io/
+
+# EVCI (v1.0)
+EVCI is an event collector service.
+
+## Evci endpoint [/v1.0/event/{type}]
+
+This enpoint allow to submit events o a given type. The event must be submited in json format. 
+
+Example: **/event/log:Error**
+
++ Parameters
+    + type (required, string, `log:Error`) ... String `type` of the product to perform action with. Has example value. 
+    
+### Publish event [POST]
+
+###Errors###
+|Status|Error|Description|
+|------|-----|-----------|
+|422   |unprocessable_entity|When body is missing or invalid.|
+
++ Request (application/json)
+
+        {
+            "Field 1": "Description of field 1",
+            "Field 2": "Description of field 2"
+        }
+
++ Response 202 
