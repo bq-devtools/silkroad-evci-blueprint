@@ -15,10 +15,15 @@ Example: **/event/log:Error**
     
 ### Publish event [POST]
 
+###Version###
+
+Avaliable from version 0.12.0
+
 ###Errors###
 |Status|Error|Description|
 |------|-----|-----------|
 |422   |unprocessable_entity|When body is missing or invalid.|
+|401  |unauthorized|If the access_token is not associated with any user.|
 
 + Request (application/json)
 
